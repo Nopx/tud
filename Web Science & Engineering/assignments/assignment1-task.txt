@@ -1,0 +1,45 @@
+Homework 1
+
+ 
+
+In general, for all homework, unless specified differently: Use the ACM two-column paper style; see http://www.acm.org/sigs/publications/proceedings-templates. Hand in PDF in Blackboard. Include (at the top) your full name (as used in TU Delft), student number, and email address.
+
+ 
+
+Answer the following questions. Make sure to mention references where appropriate. Put each question/answer in a separate paragraph.
+
+ 
+
+1.1
+
+1.1.a What is “hypertext”?
+
+1.1.b What problem was hypertext aiming to solve, what challenges was hypertext aiming to meet?
+
+1.1.c Explain why Tim Berners-Lee thought that a hypertext-based proposal like the World Wide Web could meet the challenges of large scale, decentralized information sharing.
+
+ 
+
+1.2
+
+1.2.a What is an “information system”?
+
+1.2.b Give examples of technology needed for running an information system, for designing an information system, and for analyzing a running information system.
+
+1.2.c Describe how the Web has affected information systems and the way they are engineered.
+
+ 
+
+1.3 
+
+Read J. Hendler, T. Berners-Lee, From the Semantic Web to social machines: A research challenge for AI on the World Wide Web, Artiﬁcial Intelligence (2009).
+
+Read Berners-Lee, T., Hall, W., Hendler, J., O’Hara, K., Shadbolt, N., and Weitzner, D. A framework for Web science. Foundations and Trends in Web Science 1, 1 (2006), 1–130.
+
+Read Ben Shneiderman, Web Science: A Provocative Invitation to Computer Science. COMMUNICATIONS OF THE ACM June 2007/Vol. 50, No. 6.
+
+Give min. three examples of research questions that according to you are implied by these visions. Explain with each of the examples how you think the question is relevant and can indeed be answered.
+
+ 
+
+Deadline for Homework 1 is Saturday September 17th at 21.00 (9pm). 

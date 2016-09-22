@@ -1,0 +1,11 @@
+\documentclass[a4paper]{article}
+
+\iffalse added for extra functionality \fi
+\usepackage{graphicx,wrapfig,lipsum,mathtools}
+
+
+\begin{document}
+
+Network interference is the congestion in a network caused by the latency of a system. It means, that many packages have to queue for processing. This primarily happens when communicating via shared switch queues. QJump is an addition to software made for datacenters. It provides a simple algorithm as a solution to network congestion. QJump repositions packages in a queue according to a ranking. The rank of a package is decided by the application that sends it. To make sure that not every application chooses the best rank, a trade off of latency variance vs. throughput has to be made. The higher a packages' rank, the less frequent it's application is aloud to send it. This allows latency sensitive applications to work uninhibited but lets others maintain a high throughput. The paper does rigorous tests to show, that QJump achieves better results in relieveing congestion, than other techniques.
+
+\end{document}

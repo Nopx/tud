@@ -1,0 +1,155 @@
+% This is "sig-alternate.tex" V2.1 April 2013
+% This file should be compiled with V2.5 of "sig-alternate.cls" May 2012
+%
+% This example file demonstrates the use of the 'sig-alternate.cls'
+% V2.5 LaTeX2e document class file. It is for those submitting
+% articles to ACM Conference Proceedings WHO DO NOT WISH TO
+% STRICTLY ADHERE TO THE SIGS (PUBS-BOARD-ENDORSED) STYLE.
+% The 'sig-alternate.cls' file will produce a similar-looking,
+% albeit, 'tighter' paper resulting in, invariably, fewer pages.
+%
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V2.5) produces:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) NO page numbers
+%
+% as against the acm_proc_article-sp.cls file which
+% DOES NOT produce 1) thru' 3) above.
+%
+% Using 'sig-alternate.cls' you have control, however, from within
+% the source .tex file, over both the CopyrightYear
+% (defaulted to 200X) and the ACM Copyright Data
+% (defaulted to X-XXXXX-XX-X/XX/XX).
+% e.g.
+% \CopyrightYear{2007} will cause 2007 to appear in the copyright line.
+% \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 to appear in the copyright line.
+%
+% ---------------------------------------------------------------------------------------------------------------
+% This .tex source is an example which *does* use
+% the .bib file (from which the .bbl file % is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission, you *NEED* to 'insert'
+% your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% ================= IF YOU HAVE QUESTIONS =======================
+% Questions regarding the SIGS styles, SIGS policies and
+% procedures, Conferences etc. should be sent to
+% Adrienne Griscti (griscti@acm.org)
+%
+% Technical questions _only_ to
+% Gerald Murray (murray@hq.acm.org)
+% ===============================================================
+%
+% For tracking purposes - this is V2.0 - May 2012
+
+\documentclass{sig-alternate-05-2015}
+
+
+\begin{document}
+
+% Copyright
+\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+\begin{tabular}{rl}
+Name: & Bernard C. Jollans\\Stud.-Nr: & 4620984\\email: & B.C.Jollans@student.tudelft.nl
+\end{tabular}
+
+\begin{CCSXML}
+<ccs2012>
+ <concept>
+  <concept_id>10010520.10010553.10010562</concept_id>
+  <concept_desc>Computer systems organization~Embedded systems</concept_desc>
+  <concept_significance>500</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10010520.10010575.10010755</concept_id>
+  <concept_desc>Computer systems organization~Redundancy</concept_desc>
+  <concept_significance>300</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10010520.10010553.10010554</concept_id>
+  <concept_desc>Computer systems organization~Robotics</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+ <concept>
+  <concept_id>10003033.10003083.10003095</concept_id>
+  <concept_desc>Networks~Network reliability</concept_desc>
+  <concept_significance>100</concept_significance>
+ </concept>
+</ccs2012>  
+\end{CCSXML}
+\section{Hypertext}
+\subsection{What is hypertext?}
+{\it Q: What is hypertext?}\\\\
+Hypertext is a concept first formulated by Vannever Bush in his 1945 article
+"As We May Think"\cite{vBush}. In this article he describes a device called "Memex", in which
+anyones collection of books, documents and pictures (etc.) can be accessed and navigated.\cite{vBush}
+One main concept of its navigation is now the central concept of hypertext.
+{\bf Hypertext}-documents contain links to other hypertext-documents, so called hyperlinks.
+Many hypertext based documents together can form an interconnected system, making navigation
+between documents possible via only other documents. There is no extra navigation system required,
+since in an ideal system all documents get linked to at least once.
+
+\subsection{Problems and challenges of hypertext}
+{\it Q: What problem was hypertext aiming to solve, what challenges was hypertext aiming to meet?}\\\\
+In Vannever Bush's first formulation of the Memex, he mentions that with his idea "Wholly new forms
+of encyclopedia will appear, ready made with a mesh of associative trails running through them"\cite{vBush}. The Memex will work for everyone as an image/extension of memory. In the encyclopedia the image of memory is that of an expert, which gives deep insights about the topic at hand. The parallel between hypertext and memory is its associative nature. It is not only possible to save documents, but also to save associations and later to follow them. \\
+Hypertext also gives a simple solution to the problem of navigation. With dynamic links leading to potentially every document in an interlinked system, every new document can easily be integrated. Navigating through links can be used universally and is already being done instinctively by the average user. Such a universal simple system also has the extra advantage of tackling the problem of change on the W3. Hypertext can be used to show nearly anything and will therefore never be outdated.
+
+\subsection{Tim Berners-Lee and the W3}
+{\it Q: Explain why Tim Berners-Lee thought that a hypertext-based proposal like the World Wide Web could meet the challenges of large scale, decentralized information sharing} \\\\
+In Tim Berners-Lees vision for the "world-wide web" or W3 he describes, a universal solution for a decentralized information sharing system. A part of this vision is formulated in \cite{timbw3}. Tim Berners-Lee describes a system, in which hypertext documents can be navigated using only two methods. The first is to query a server with a text string, the second is to navigate to another document using a hyperlink on the current page. These navigation methods are simple and easy to use for anyone.\\
+In addition it is easy to create documents with information for others to read. It is not mandatory to create a document as hypertext, since a hyperlink or query can also lead to plain text. T.B.L. suggests to use a script or C-program to mediate between the information you want to share and the requests from the W3. Since this mediator can be of any nature, there are no restrictions as to how the information is being saved. Overall T.B.L. believes, that it is not only easy to navigate the W3 but also to add to it. This makes it easy for anyone to assist in the Webs growth. \\
+T.B.L. hopes there will be a big number of contributers. On the one hand this would increase the amount of information on the Web. On the other hand it would cause a faster generation of agreed upon standards. The evolution of standards according to the nature of the Web is exactly what T.B.L. had in mind, when he tried to impose less standards from the get go.\\
+
+%Notizen: It is easy to add data for anyone. and to navigate it. It is simple but able to represent almost all existing information systems. no restrictions on how to save data and build servers -> anybody can join. Not even need for hypertext since plain text can be linked to too
+
+\section{Information Systems}
+\subsection{What is an information system?}
+{\it Q: What is an information system?}\\\\
+An information system(IS) is a system for processing collecting and storing data and for providing information and knowledge\cite{dictIS}. Usually an IS does this by exchanging data with an object system (such as a business process or the outside world). The IS is used to support work with the object system in question. For instance a company can have a large inventory of products they want to sell ( this is the object system). They have a database in place to look up what items there are and where to find them. A piece of software provides a way of accessing the database to read and write data. The software acts as a mediator between the human and the data. It together with the database make the information system.
+
+\subsection{Technologies for IS}
+{\it Q: Give examples of technology needed for running an information system, for designing an information system, and for analyzing a running information system}\\\\
+An information system most of all needs some way of storing data. This is usually done using a database. The next most important thing for an information system is the user. The user and the database are then connected via a communication channel. This could for instance be a piece of software on a machine, which is connected to the database with an ethernet cable.\\
+For designing an IS there are very many options. A straightforward approach would be to use a piece of paper and a pen to draw a diagram describing the IS in every aspect, including hardware, and software-processes. There are also surely IDEs which have tools for designing a piece of software with an underlying database.\\
+How to analyze the system is completely dependent on the nature of the IS. If it is working well however can easily be found out by asking the user and the owner how they perceive the work flow of the system. This approach implies however, that any thing which cannot be noticed is not a problem.
+
+\subsection{Web and IS}
+{\it Q: Describe how the Web has affected information systems and the way they are engineered.}\\\\
+The Web has made information systems a normal part of everybody's day. Systems like Amazon and Facebook have to cope with vast amounts of users. They are a lot bigger and more complex, than old information systems. They have to be designed in a scalable way and be usable by everyone. The design process has become a lot more difficult and cannot easily be managed without an iterative approach of reusing and developing the old system. The development process constantly has to be adapted to the ongoing change on the web. Certain things however are not variable, like the use of hypertext. The web has also created a demand for fresh data. In contrast to earlier, when it was okay for data to be slightly outdated, today it is important for data to be current.
+
+\section{Research Questions}
+\subsection{From the Semantic Web to social machines: A research challenge for AI
+on the World Wide Web \cite{paper1}}
+In this paper the word "context" gets mentioned a lot. How to describe a context or acquire data about it, never gets mentioned. To answer these questions, we can look at what we can already describe. A commonly used piece of contextual information is the location of a device. It is measured with the help of GPS satellites and described using maps or similar methods. Another piece of contextual information derived from GPS is the amount of other devices near a location.\\
+These two pieces of information can give powerful insights about the context of a user but certainly do not describe everything. An interesting question could therefore be: {\bf How can we acquire additional contextual information?}\\
+This research question is definitely not new. Many devices and techniques already exist to solve this question. Self driving cars for instance use many different sensory inputs to learn about their current context. This and other areas like computer vision and language recognition overlap. Even though they are big far progressed fields, there are still many advances that can be made.\\
+The answers found in these fields become relevant to the social web, once most devices have some kind of sensors like cameras or microphones. But the problem also gets fundamentally changed. Since the camera and the microphone are both not aimed at anything anymore one has to make sense of a directionless stream of data.
+
+\subsection{Web Science: A Provocative Invitation to Computer Science \cite{paper2}}
+This paper talks about the emerging field of web science. The author does not formulate a vision as much as he describes a vision of somebody else. He outlines the differences between computer science and web science and gives a brief look on which parts of the web cannot be explained by classical computer science. One part is about how to make the web usable for every different group of people. To follow this question, we have to first find out, what the different user groups are. As there is not just one answer to this, we have to make sure the answer we are looking for stays within the bounds of usefulness. In answering this question we could easily define 1.000.000 different user groups, where differences go from age to eye color. We can reformulate the question to {\bf What are the most important differences between web users, regarding their natural use of the web?} This question should best be answered with a ranking of differences, going from most important to least important. Authors of different web-sites can then do the designing according to their target audience and the amount of work they want to put into the sites usability.
+
+\subsection{A Framework for Web Science \cite{paper3}}
+In section 4 of this book, there is a lot about different models describing the web. Graphs and plots of node-amounts are very common description methods. Many things however cannot be described with these. A good question to ask would be: {\bf How can we describe a certain aspect of the web, using mathematical models?} \\
+This question is very broad. It is therefore important to reformulate it according to the specific area of the web that has to be modeled. Having a mathematical model helps in creating a uniform understanding of a certain situation. On the basis of the model laws can be found to describe the situation. Achieving this is an indispensible part of the future development of web science, if it is not to be widely questioned in its legitimacy.\\
+Finding answers to this question has already partly been done. As mentioned, there are models to describe certain aspects of the web. Further research can simply take these models and adapt and develop them according to other aspects of the web.
+
+\begin{thebibliography}{1}
+\bibitem{vBush} Vannever Bush {\em As We May Think} 1994: The Atlantic Monthly
+\bibitem{timbw3} T.J. Berners-Lee, R. Cailliau and J.-F. Groff {\em The world-wide web}: Computer Networks and ISDN Systems 25 (1992) 454-459
+\bibitem{dictIS} Vladimir Zwass (2016-02-10). "Information system". Britannica.com
+\bibitem{paper1} J. Hendler, T. Berners-Lee, {\em From the Semantic Web to social machines: A research challenge for AI on the World Wide Web, Artificial Intelligence} (2009).
+\bibitem{paper2} Berners-Lee, T., Hall, W., Hendler, J., O'Hara, K., Shadbolt, N., and Weitzner, D. {\em A framework for Web science. Foundations and Trends in Web Science 1, 1} (2006), 1-130
+\bibitem{paper3} Ben Shneiderman, {\em Web Science: A Provocative Invitation to Computer Science.} COMMUNICATIONS OF THE ACM June 2007/Vol. 50, No. 6.
+\bibitem{fix}
+\end{thebibliography}
+\end{document}
