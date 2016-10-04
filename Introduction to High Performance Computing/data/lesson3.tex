@@ -1,0 +1,36 @@
+\documentclass[a4paper]{article}
+\usepackage{fullpage}
+\oddsidemargin = -0.5in
+
+\iffalse added for extra functionality \fi
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\newcommand{\arrow}{$\xrightarrow[]{}$}
+\usepackage{graphicx,wrapfig,lipsum,mathtools}
+
+
+\begin{document}
+
+\section{Parallel Programming Models (PM)}
+The PM has to talk about the language, because they have different levels of abstraction (Java vs. Assembly)\\
+{\bf Quick Introduction}\\
+\begin{tabular}{rl}
+Process:& Program in execution processed by processor\\&It can have 3 states: running, starting, waiting, terminated\\& For a waiting process it is saved where he will continue execution\\&Processor has Program counter to know which process' turn is next\\&There is 1 per CPU\\
+Thread:& To do things parallel in a process\\& If 1 thread does IO-Block, the whole process is blocked, except if you use kernel threads\\& There is one per Core
+\end{tabular}
+
+\subsection{Programming in parallel}
+First start out with a sequential program, then adapt and search for parts which can be parallelized.\\
+\begin{tabular}{rl}
+Control Model:& Do the same / different things in parallel\\
+Data:& Can be shared / private\\
+Synchronization:& Is generally done explicitly\\
+Communication:& Is done via shared variables
+\end{tabular}
+
+\subsection{OpenMP}
+\subsection{pThreads}
+\subsection{High Performance Fortran}
+\subsection{MPI}
+
+\end{document}

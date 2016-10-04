@@ -1,0 +1,171 @@
+\documentclass[a4paper]{article}
+\usepackage{fullpage}
+\oddsidemargin = -0.5in
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\iffalse added for extra functionality \fi
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\newcommand{\arrow}{$\xrightarrow[]{}$}
+\usepackage{graphicx,wrapfig,lipsum,mathtools}
+
+
+\begin{document}
+
+\section{Parallel computing}
+Doing things concurrently $\cong$ more complex than sequential programming. Central questions:
+\begin{itemize}
+\setlength{\itemsep}{-4pt}
+\item BASICS: How do we split up tasks?
+\item BASICS: How do the different parts communicate?
+\item PERFORMANCE: How much time does it take to run the application? (User's question)
+\item PERFORMANCE: Is the system fully utilized? (Adim's question)
+\end{itemize}
+A few important termas are:\\
+\begin{tabular}{rl}
+Computational Model:&Model that can be solved with a computer\\
+Model of Computation:&The description of how to solve a Computational Model with a computer\\
+Concurrent:&Parallel / At the same time\\
+\end{tabular}
+Typical steps in development are: \\
+Specification \arrow Design \arrow Implementation \arrow Adaption to system \arrow Adaption to Machine
+
+\subsection{Invisible Parallelism}
+This is parallelism that we don't see while programming like:
+\begin{itemize}
+\setlength{\itemsep}{-4pt}
+\item In compiler for the hardware and the OS
+\item Pipelining
+\item On the Bit-/Instruction-/Memory-Level
+\end{itemize}
+
+\subsection{Amdahl's Law}
+Describes how much a program can be sped up:\\
+\tab {\LARGE S=$\frac{1}{s+(1-s)/p}\geq\frac{1}{s}$\\}
+\begin{tabular}{rl}
+S:&speed up\\
+s:&time used for sequential part\\
+1-s:&time used for parallel part\\
+p:&number of processors
+\end{tabular}
+
+\subsection{Granularity}
+\begin{itemize}
+\setlength{\itemsep}{-4pt}
+\item Splitting up processes into pieces
+\item How can they communicate? How can I combine them to run on 1 processor?
+\item How small can and should I make them?
+\end{itemize}
+
+\subsection{Data Locality}
+\begin{itemize}
+\setlength{\itemsep}{-4pt}
+\item How to minimize data retrieval time?
+\item How to keep data as local as possible?
+\end{itemize}
+
+\subsection{Load Imbalane}
+\begin{itemize}
+\setlength{\itemsep}{-4pt}
+\item Trying to balance load across processors
+\item Balancing the load of regular and irregular processes
+\end{itemize}
+
+\section{Parallel Algorithms}
+How do you identify parallelism?\\
+\begin{itemize}
+\setlength{\itemsep}{-4pt}
+\item Look up algorithms
+\item Look at code
+\item Look at data structures
+\end{itemize}
+
+\subsection{Design}
+\begin{enumerate}
+\setlength{\itemsep}{0pt}
+\item Decompose (Machine Dependent)
+	\begin{itemize}
+	\setlength{\itemsep}{-4pt}
+	\item What level of parallelism? (static / dynamic)
+	\item How many processors?
+	\item How big is the problem?
+	\end{itemize}
+\item Clustering (Machine Independent)
+	\begin{itemize}
+	\setlength{\itemsep}{-4pt}
+	\item How to bring tasks together?
+	\end{itemize}
+\item Implement (Machine Dependent)
+\item Map work to processes (Machine Dependent)
+	\begin{itemize}
+	\setlength{\itemsep}{-4pt}
+	\item Doing it static / dynamic?
+	\item Being aware of data locality and possible load imbalance.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Memory}
+There are different kinds of memory:\\
+\begin{tabular}{rl}
+Distributed:&Programmer has to manually communicate data. This is most common.\\
+Shared:&Uniform location of data \arrow easier for programmer. The bus can get overloaded here.\\
+Virtual Shared:&Is distributed but pretends to be shared.
+\end{tabular}
+
+\subsection{Solving Concepts}
+\begin{enumerate}
+\setlength{\itemsep}{0pt}
+\item Farmer Worker
+	\begin{itemize}
+	\setlength{\itemsep}{-4pt}
+	\item Farmer organizes and schedules
+	\item Workers do work
+	\item Farmer can push work to workers (Push-Model)
+	\item Workers can pull work from farmer (Pull-Model)
+	\end{itemize}
+\item Divide \& Conquer
+	\begin{itemize}
+	\setlength{\itemsep}{-4pt}
+	\item Recursive split up (for example)
+	\item Hardest part is the Administration
+	\item First divide problem then conquer subparts
+	\end{itemize}
+\item Data Parallelism
+	\begin{itemize}
+	\setlength{\itemsep}{-4pt}
+	\item When data is splitable
+	\item Different nodes work on different parts of data
+	\end{itemize}
+\item Task Parallelism
+	\begin{itemize}
+	\setlength{\itemsep}{-4pt}
+	\item Different tasks for different nodes
+	\item Task can start when input is available (data dependent)
+	\item Task can start when its output is needed (demand-flow)
+	\end{itemize}
+\item Bulk Synchronisation
+	\begin{itemize}
+	\setlength{\itemsep}{-4pt}
+	\item Every part waits at a certain point for every other part and continues together
+	\end{itemize}
+\end{enumerate}
+
+\subsection{System Level Communication}
+{\bf With Shared Memory}
+	\begin{itemize}
+	\setlength{\itemsep}{-4pt}
+	\item Mutual exclusion per data (Only one can access)
+	\item (Un)locking mechanisms put in place
+	\item Bariers put in place where processes wait
+	\end{itemize}
+{\bf With Distributed Memory}
+	\begin{itemize}
+	\setlength{\itemsep}{-4pt}
+	\item Communication has to happen
+	\item After sending data, it is duplicate \arrow which is the original?
+	\item General structure of send command: SEND(Buffer*, element-count, destination)
+	\item General structure of receive command: RECEIVE(Buffer*, element-count, owner)
+	\end{itemize}
+
+
+\end{document}

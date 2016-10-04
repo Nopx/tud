@@ -6,6 +6,81 @@
 
 \begin{document}
 
-Network interference is the congestion in a network caused by the latency of a system. It means, that many packages have to queue for processing. This primarily happens when communicating via shared switch queues. QJump is an addition to software made for datacenters. It provides a simple algorithm as a solution to network congestion. QJump repositions packages in a queue according to a ranking. The rank of a package is decided by the application that sends it. To make sure that not every application chooses the best rank, a trade off of latency variance vs. throughput has to be made. The higher a packages' rank, the less frequent it's application is aloud to send it. This allows latency sensitive applications to work uninhibited but lets others maintain a high throughput. The paper does rigorous tests to show, that QJump achieves better results in relieveing congestion, than other techniques.
+%Personal Data of author
+\hfill Bernard Jollans - 4620984
+\hfill 
+
+\setcounter{secnumdepth}{0}
+\section{Chosen paper}
+Matthew P. Grosvenor, Malte Schwarzkopf, Ionel Gog, Robert N. M. Watson,  
+Andrew W. Moore, Steven Hand, and Jon Crowcroft, University of Cambridge
+"Queues Don’t Matter When You Can JUMP Them!" 12th USENIX Symposium on Networked Systems  
+Design and Implementation (NSDI ’15), 2015
+
+\setcounter{secnumdepth}{0}
+\section{Abstract}
+Network interference is the congestion in a network from throughput-intensive applications, causing queuing and delaying communication for latency-sensitive applications. This primarily happens when two hosts use a shared switch queue. QJump is an addition to software made for datacenters, which can be added to code or to existing software without having to recompile it. It provides an algorithm as a solution to network interference. The algorithm is a simplified form of the Parekh-Galleger theorem, applied to datacenters. QJump lets packages jump past other packages in a queue according to a ranking. The rank of a package is decided by the application that sends it. To make sure that not every application chooses the best rank, a trade off of latency variance vs. throughput has to be made. The higher a packages' rank, the less frequent it's application is allowed to send it. This allows latency sensitive applications to work uninhibited but lets other applications maintain a high throughput. The paper gives a rough overview of how QJump was implemented and gives a detailed guide on how to configure it. Additionally the paper does various tests to show, that QJump achieves better results in relieving congestion, than other state of the art technologies. In multiple experiments the authors show that QJump's result is nearly optimal. 
+
+\setcounter{secnumdepth}{0}
+\section{Main Strengths}
+\begin{itemize}
+	\setlength{\itemsep}{-4pt}
+	\item The paper is well structured and easily readable
+	\item The many graphics and tables are used effectively and make the paper more comprehensive
+	\item It is both explained how the technology works and how to use it
+	\item The technology is compared to many similar technologies
+\end{itemize}
+
+\setcounter{secnumdepth}{0}
+\section{Main Weaknesses}
+\begin{itemize}
+	\setlength{\itemsep}{-4pt}
+	\item The problem and solution are both not very novel
+	\item It is not well explained how the technology is novel
+	\item The experiments focus on a too specific case
+\end{itemize}
+
+\newpage
+\setcounter{secnumdepth}{0}
+\section{Detailed Comments}
+\begin{itemize}
+	\setlength{\itemsep}{-4pt}
+	\item The paper contains many graphics and tables which are made relevant in the text. Every graphic 
+	and table is explained thoroughly.
+	\item The paper is written very comprehensively and requires no previous knowledge.
+	\item The paper references itself where relevant. This makes it easy to start reading 
+	anywhere.
+	\item The experiments compare QJump to many of its competitors. 
+	\item Another set of experiments shows the performance of QJump in different scenarios, but without 
+	comparing it to other technologies.
+	\item The comparing experiments have a too strong focus on Hadoop as the high-throughput application 
+	and leave questions about how well the technology compares in other cases. It is made clear though, 
+	that other scenarios should bring similar results.
+	\item The solution suggested is not novel. It is a simplification of the Parekh-Gallager theorem  
+	adapted to shared switch queues in datacenters' intranetworks. This is also mentioned in the 
+	paper itself, but without outlining the differences, which makes it difficult to evaluate the 
+	novelty of the paper.
+	\item The subject of data-flow control in datacenters is a niche subject making it less 
+	relevant for most readers. However since it is shown that the technology is better than it's 
+	competitors, the paper becomes relevant and useful in it's domain.
+	\item It is explained how the technology works in theory and how it is implemented. With this it 
+	would be easy to write similar software. Also the paper includes a detailed explanation on how 
+	to configure the implementation.
+\end{itemize}
+
+\setcounter{secnumdepth}{0}
+\section{Overall Evaluation}
+The paper is very well written and relevant in it's domain, but does not provide a very novel solution to it's problem. It covers all necessary details about QJump and leaves no questions open. The experiments are mainly focused on a single case but are allencompasing in in every other aspect.
+\begin{itemize}
+	\setlength{\itemsep}{-4pt}
+	\item Originality: 3/5
+	\item Technical Content: 4/5
+	\item Readability: 5/5
+	\item Overall: 4/5
+\end{itemize}
+
+\setcounter{secnumdepth}{0}
+\section{Suggestion for Improvement}
+The paper mentions that it is not very novel, with a reference to the Parekh-Gallager theorem. It could expand on that by shortly outlining the differences to QJump. Also the different test scenarios for QJump could be used for it's competitors as well, to get a better overall view of the comparison.
 
 \end{document}

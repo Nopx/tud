@@ -1,0 +1,80 @@
+\documentclass[a4paper]{article}
+\usepackage{fullpage}
+\oddsidemargin = -0.5in
+
+\iffalse added for extra functionality \fi
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{graphicx,wrapfig,lipsum,mathtools}
+
+
+\begin{document}
+
+{\huge Data Centers \& Efficiency\\}
+\section{Datacenter:}
+\begin{itemize}
+\setlength{\itemsep}{-4pt}
+\item Are the backbone of many computer systems
+\item Have long racks in mysterious buildings
+\item business technology uses them widely
+\item REASON: Hight compute power for little price (Economy of Scale)
+\item REASON: Data is in one spot to make things easier
+\item REASON: System has a consistent bandwidth
+\item REASON: In total easier support of demanding applications
+\end{itemize}
+A typical firt year of a {\bf DC} consists of many failures (overheating, rack failure, rack movement,...)
+
+\subsection{Costs}
+\begin{itemize}
+\setlength{\itemsep}{-4pt}
+\item Servers (CPU, Memory / Storage)
+\item Infrastructure (Power distribution and cooling)
+\item Power (Electrical utility costs)
+\item Network (Links, transit and equipment)
+\item Server costs are the highest
+\item Datacenters usually have low utilization (10-30\%). Because:\\
+	-They are not agile and not every server can do every task\\
+	-Peak load has to be managable\\
+	-This is normal though with many things not only DC (Highways have low utilization aswell)
+\end{itemize}
+
+\subsection{Other}
+\begin{itemize}
+\setlength{\itemsep}{-4pt}
+\item Storage: Distributed filesystem or network attached storage
+\item Network: Very important and usually 1-10 GB/s
+\item Programmability: What encompases the Map Reduce Programming model? We need appropriate abstractions
+\end{itemize}
+
+\section{DC Networks \& Problems}
+\begin{itemize}
+\setlength{\itemsep}{-4pt}
+\item Need for uniform high capacity (no need to consider topology when adding servers)
+\item Network traffic of one service should be unaffected by other service (Performance Isolation)
+\item Any Server ca have any IP Address for better agility
+
+\item Applications get addressed directly
+\end{itemize}
+
+\subsection{Design Issues}
+\begin{itemize}
+\setlength{\itemsep}{-4pt}
+\item Applications get addressed directly
+\item There are {\bf A}pplication {\bf A}ddresses and {\bf L}ocation {\bf A}ddresses
+\item Most traffic is in the intranet
+\item Apps should not disturb each other (fairness and isolation)
+\end{itemize}
+
+\section{Energy Efficiency}
+\begin{itemize}
+\setlength{\itemsep}{-4pt}
+\item Computers use 2\% of worlds energy
+\item PUE = Power Usage Effectiveness
+\item Energy should be little and proportional to work
+\item How?\\
+	-match work to power or power to work
+	-send power to other systems
+	-make disks spin slower or so
+\end{itemize}
+
+\end{document}

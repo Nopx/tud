@@ -1,0 +1,82 @@
+\documentclass[a4paper]{article}
+
+\iffalse added for extra functionality \fi
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{graphicx,wrapfig,lipsum,mathtools}
+
+
+\usepackage{blindtext,graphicx}
+\usepackage[absolute]{textpos}
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+\begin{textblock}{10}(4,2)
+\noindent\footnotesize Parallel and Distributed Systems Group\\
+Faculty of Electrical Engineering, Mathematics and Computer Science\\
+Delft University of Technology
+\end{textblock}
+\title{\vspace{-2cm}Paper Review 1\\ Seminar Cloud Computing(IN4392)\\2016-2017}
+\author{Bernard Jollans \\ 4620984}
+\maketitle
+\section{Paper Reviewed}
+Jonathan Mace, 
+ Peter Bodik,  
+Rodrigo Fonseca, 
+and Madanlal Musuvathi,
+"Retro: Targeted Resource Management in  
+Multi-tenant Distributed Systems",
+12th USENIX Symposium on Networked Systems  
+Design and Implementation (NSDI ’15) 2015, pp. 589-603
+
+\section{Abstract}
+In today's shared distributed systems, management of resources is a real issue. This is due to three main reasons: The unexpected behavior of tenants, the low control over applications after they start and system specific unusual tasks like failure recovery. Bad management often results in overloaded resources and high latencies in the system. The paper presents Retro, a resource management framework which promises to address these problems. A central idea, which separates Retro from similar frameworks such as "Cake" and "IOFlow", is that it is system independent. It separates the resource management policies from the resource usage measurement and policy enforcement. The latter is done by Retro itself, where as the policies are designed according to the system. Retro's design revolves around three concepts: workflow, resources and control points. A workflow is anything that requires resources, like an application or a system process. What exactly the workflows are, can be configured by the system designer. A workflow passes a number of control points, at which its throughput can be throttled by a central controller. The throttling happens on the basis of two metrics: slowdown and load, which specify how much load is put on a resource by a given workflow and how much this slows it down. Finally the authors conduct tests in a VM environment, using three different policies, which they explain in depth. They manage to show the positive effect Retro has on the slowdown and load in the system.
+
+\section{Main Strengths}
+\begin{itemize}
+	\setlength{\itemsep}{-2pt}
+	\item The technology is novel and very relevant
+	\item The underlying issues are well explained with examples
+	\item The tests are well illustrated with graphics
+	\item The paper requires no previous knowledge
+\end{itemize}
+
+\section{Main Weaknesses}
+\begin{itemize}
+	\setlength{\itemsep}{-2pt}
+	\item The comparison to similar frameworks is only theoretical
+	\item The paper gets side tracked during the evaluation
+	\item The paper's explanatory graphics add little value
+\end{itemize}
+
+\section{Detailed Comments}
+\begin{itemize}
+	\setlength{\itemsep}{-2pt}
+	\item The paper gives a novel approach to resource management and is relevant to its field.
+	\item The paper constantly gives examples to make its explanations more comprehensive.
+	\item The tests during the evaluation are very well illustrated with comprehensive graphics.
+	\item The graphics before the evaluation phase add little value to the explanations in the text.
+	\item When the paper explains its LatencySLO policy during the evaluation, it goes too in depth and seems to get side tracked. This can help system designers who plan to use Retro, but it is off topic.
+	\item The paper compares Retro to other frameworks only in a theoretical manner, without tests. This is justified by saying that Retro is the only framework which is system independent. However the comparisons against other frameworks could have been conducted per system.
+	\item The paper advertises Retro as system independent, yet only conducts tests on a single system. It mentions however, that Retro works equally well on other systems.
+	\item The paper underlines the issues being addressed with opinions of prominent companies (e.g. Microsoft).
+	\item The paper does not require prior knowledge. It gives a short introduction to the underlying system used for the illustrations and tests.
+\end{itemize}
+
+\section{Overall Evaluation}
+The paper is original in its solution to resource management of shared distributed systems. Since it is system independent and works effectively, Retro seems like a promising tool for its field. Revisions are needed for the papers testing phase. The numeric evaluation is as follows:
+	\begin{itemize}
+	\setlength{\itemsep}{-2pt}
+	\item Originality: 5/5
+	\item Technical Content: 4/5
+	\item Readability: 4/5
+	\item Overall: 4/5
+	\end{itemize}
+
+\section{Suggestion for Improvement}
+As mentioned there should be practical comparisons to system specific frameworks, which build on the theoretical evaluation. Additionally the graphics used while explaining the design should be reworked, as they add little value to the overall understanding.
+
+\end{document}

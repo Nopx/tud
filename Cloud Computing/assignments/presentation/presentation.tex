@@ -1,0 +1,33 @@
+\documentclass[a4paper]{article}
+\usepackage{fullpage}
+\oddsidemargin = -0.5in
+
+\iffalse added for extra functionality \fi
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{graphicx,wrapfig,lipsum,mathtools}
+
+
+\begin{document}
+
+\section{Problem}
+Exisitng Framorks are statically allocating resources to jobs\\
+-> cant maintain SLOs while maintaining full utilization and efficiency\\
+- 1 solution killing tasks -> high overheads\\
+- 1 solution only use 70\% of resources\\
+------Utilizaztion: using all resources; Efficiency: not rdoing tasks\\
+
+\section{not working solutions}
+make task size smaller -> more disk seeks and more overhead at scheduler\\
+uniform size tasks -> doesnt work because $\frac{input amount}{task time}$ is not consistent\\
+OS checkpoints, suspend and save state in memory -> too much space needed, HDD no option too slow etc.\\
+
+\section{Solution}
+Amoeba - Prototype\\
+Smallest granularity is task -> make it more granular -> split up tasks\\
+Mapper gets set of records as input (a list of words); every possible sublist is a admissable partitioning of the data (the blocks to work on can consist of any number of words); you can kill a task after every record and pretend you made the blocks that way
+A Checkpoint is the nest key where to continue
+
+
+
+\end{document}

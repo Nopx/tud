@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.9)  26 SEP 2016 14:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.9.9)  23 SEP 2016 10:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lesson2.tex
-(./lesson2.tex
+**Review_Retro_Multi-Tenancy_and_Virtualization1.tex
+(./Review_Retro_Multi-Tenancy_and_Virtualization1.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -22,10 +22,6 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-(/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
-Package: fullpage 1999/02/23 1.1 (PWD)
-\FP@margin=\skip43
 )
 (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
@@ -100,19 +96,19 @@ Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bcount=\count95
 \calc@Adimen=\dimen120
 \calc@Bdimen=\dimen121
-\calc@Askip=\skip44
-\calc@Bskip=\skip45
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count96
-\calc@Cskip=\skip46
+\calc@Cskip=\skip45
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/03/03 v2.15a AMS math features
-\@mathmargin=\skip47
+\@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -162,8 +158,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \totwidth@=\dimen129
 \lineht@=\dimen130
 \@envbody=\toks19
-\multlinegap=\skip48
-\multlinetaggap=\skip49
+\multlinegap=\skip47
+\multlinetaggap=\skip48
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2735.
 LaTeX Info: Redefining \] on input line 2736.
@@ -174,42 +170,89 @@ LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \g_MT_multlinerow_int=\count109
 \l_MT_multwidth_dim=\dimen131
-\origjot=\skip50
+\origjot=\skip49
 \l_MT_shortvdotswithinadjustabove_dim=\dimen132
 \l_MT_shortvdotswithinadjustbelow_dim=\dimen133
 \l_MT_above_intertext_sep=\dimen134
 \l_MT_below_intertext_sep=\dimen135
 \l_MT_above_shortintertext_sep=\dimen136
 \l_MT_below_shortintertext_sep=\dimen137
-) (./lesson2.aux)
-\openout1 = `lesson2.aux'.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count110
+\c@Blindtext=\count111
+\c@blind@countparstart=\count112
+\blind@countxx=\count113
+\blindtext@numBlindtext=\count114
+\blind@countyy=\count115
+\c@blindlist=\count116
+\c@blindlistlevel=\count117
+\c@blindlist@level=\count118
+\blind@listitem=\count119
+\c@blind@listcount=\count120
+\c@blind@levelcount=\count121
+\blind@mathformula=\count122
+\blind@Mathformula=\count123
+\c@blind@randomcount=\count124
+\c@blind@randommax=\count125
+\c@blind@pangramcount=\count126
+\c@blind@pangrammax=\count127
+)
+(/usr/share/texlive/texmf-dist/tex/latex/textpos/textpos.sty
+Package: textpos 2014/01/03 v1.7j
+
+Package: textpos 2014/01/03 1.7j, absolute positioning of text on the page
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)
+\TP@textbox=\box29
+\TP@holdbox=\box30
+\TPHorizModule=\dimen138
+\TPVertModule=\dimen139
+\TP@margin=\dimen140
+\TP@absmargin=\dimen141
+
+Grid set 16 x 16 = 37.34424pt x 52.81541pt
+\TPboxrulesize=\dimen142
+\TP@ox=\dimen143
+\TP@oy=\dimen144
+\TP@tbargs=\toks21
+\TP@prevdepth=\dimen145
+TextBlockOrigin set to 0pt x 0pt
+) (./Review_Retro_Multi-Tenancy_and_Virtualization1.aux)
+\openout1 = `Review_Retro_Multi-Tenancy_and_Virtualization1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count110
-\scratchdimen=\dimen138
-\scratchbox=\box29
-\nofMPsegments=\count111
-\nofMParguments=\count112
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count113
-\MPscratchDim=\dimen139
-\MPnumerator=\count114
-\makeMPintoPDFobject=\count115
-\everyMPtoPDFconversion=\toks22
+\scratchcounter=\count128
+\scratchdimen=\dimen146
+\scratchbox=\box31
+\nofMPsegments=\count129
+\nofMParguments=\count130
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count131
+\MPscratchDim=\dimen147
+\MPnumerator=\count132
+\makeMPintoPDFobject=\count133
+\everyMPtoPDFconversion=\toks23
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -258,38 +301,46 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 16.
+ABD: EveryShipout initializing macros
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
 
+Overfull \hbox (4.41742pt too wide) in paragraph at lines 26--34
+\OT1/cmr/m/n/10 Jonathan Mace, Pe-ter Bodik, Ro-drigo Fon-seca, and Madan-lal M
+usu-vathi, "Retro:
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 41.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--30
-
- []
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./lesson2.aux) ) 
+] [2] [3]
+(./Review_Retro_Multi-Tenancy_and_Virtualization1.aux) ) 
 Here is how much of TeX's memory you used:
- 2968 strings out of 494910
- 41820 string characters out of 6179837
- 201905 words of memory out of 5000000
- 6232 multiletter control sequences out of 15000+600000
- 5612 words of font info for 21 fonts, out of 8000000 for 9000
+ 3227 strings out of 494910
+ 46233 string characters out of 6179837
+ 209046 words of memory out of 5000000
+ 6472 multiletter control sequences out of 15000+600000
+ 7954 words of font info for 29 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,12n,23p,240b,147s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on lesson2.pdf (1 page, 51996 bytes).
+ 38i,6n,23p,1566b,201s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb>
+Output written on Review_Retro_Multi-Tenancy_and_Virtualization1.pdf (3 pages, 
+85444 bytes).
 PDF statistics:
- 24 PDF objects out of 1000 (max. 8388607)
- 16 compressed objects within 1 object stream
+ 38 PDF objects out of 1000 (max. 8388607)
+ 26 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
