@@ -28,9 +28,63 @@ Synchronization:& Is generally done explicitly\\
 Communication:& Is done via shared variables
 \end{tabular}
 
-\subsection{OpenMP}
+\subsection{Open Multi Processing (OpenMP)}
+Syntax: \# pragma omp directive [clauses] \\
+\begin{tabular}{lll}
+(e.g. &\# pragma omp parallel private (var)&creates parallel part with a private variable\\
+&\# pragma omp for&creates parallel for loop\\
+&\# pragma omp section&does a single execution of following code\\
+&\# pragma omp for schedule (static,2)&everybody does 2 following itereations)\\
+\end{tabular}\\
+Mainly meant for task and data paralelism.
+
 \subsection{pThreads}
-\subsection{High Performance Fortran}
-\subsection{MPI}
+Just normal threads, you can do anything.
+
+\subsection{High Performance Fortran (HPF}
+This is Fortran with added annotations.\\
+Statements distribute data among nodes. Then something is programmed for everyone to do.\\
+\arrow only data parallelism is possible
+\begin{itemize}
+\setlength{\itemsep}{-3pt}
+\item The Control is Data Driven
+\item The Synchronization happens implicitly
+\end{itemize}
+You can basically distribute an array over multiple nodes and run the same operation everywhere.\\
+Different Arrays can be aligned with each other on different nodes. \arrow both have same elements on same node.\\
+It is not possible to run different tasks on different nodes. Everybody runs the same thing.
+
+\subsection{Message Passing Interface (MPI)}
+Consists of independent processes, that each have a number. They can pass messages between each other.\\ Everything is done explicitly. For example everybody computes for part of vector and then shares.\\
+
+\subsection{Threading Building Blocks (TBB)}
+Invented by MIT, bought by Intel.\\
+Extension of C++, specify task and when/ how to run it. Don't specify amount of nodes.\\
+Parallel actions defined in classes. Classes then run as parallel.
+
+\subsection{Cilk}
+Extension of C with simple statements. Mainly for Divide \& Conquer.\\
+Everything (including dynamic multithreading) through statements "spawn" and "sync"
+
+\subsection{Satin}
+Just like Cilk just based on Java.
+
+\subsection{Pattern Based Languages}
+Idea: A set of often used methods get implemented with templates \arrow very high abstraction.
+
+\subsection{Map Reduce}
+Never forget this.
+
+\subsection{Comparing Programming Models}
+With certain criteria:\\
+{\bf \begin{tabular}{ccccccc}
+ Programmability &=&Performance&+&Productivity&+&Portability
+\end{tabular}}\\
+Portabilities:\\
+\begin{tabular}{rl}
+Code Portability:&Can Code be moved to other machines\\
+Parallelism Portability:& Does Parallelism work on other machines\\
+Performance Portability:&Does Performance stay on other machines\\
+\end{tabular}
 
 \end{document}

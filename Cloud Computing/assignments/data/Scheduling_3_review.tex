@@ -1,0 +1,84 @@
+\documentclass[a4paper]{article}
+
+\iffalse added for extra functionality \fi
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{graphicx,wrapfig,lipsum,mathtools}
+
+
+\usepackage{blindtext,graphicx}
+\usepackage[absolute]{textpos}
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+\begin{textblock}{10}(4,2)
+\noindent\footnotesize Parallel and Distributed Systems Group\\
+Faculty of Electrical Engineering, Mathematics and Computer Science\\
+Delft University of Technology
+\end{textblock}
+\title{\vspace{-2cm}Paper Review 3\\ Seminar Cloud Computing(IN4392)\\2016-2017}
+\author{Bernard Jollans \\ 4620984}
+\maketitle
+
+\section{Paper Reviewed}
+Zhiming Shen, Sethuraman Subbiah, Xiaohui Gu, John Wilkes,
+"CloudScale: Elastic Resource Scaling for
+Multi-Tenant Cloud Systems",
+SOCC'11, October 27-28, 2011, Cascais, Portugal
+
+\section{Abstract}
+CloudScale is a system, which dynamically scales resources in multi-tenant cloud computing infrastructure.\\ It calculates a resource usage prediction for every tenant and dynamically scales resources to minimize the costs of SLO (Service Level Objective) violation penalties. If a SLO is not met it means, that a tenant did not get the resources he was entitled too. CloudScale reacts to this under-estimation error by slowly adapting the amount of resources assigned to this tenant. This happens according to a dynamic value $\alpha$. \\
+Cloudscale uses an adaptive padding mechanism to minimize the effect of resource usage bursts. It gives every tenant an extra amount of available resources to ensure their sufficient availability. The padding is dynamically adapted according to an analysis of recent resource usage patterns. \\
+CloudScale also encompasses a system to migrate tenants to different machines incase contention on one machine becomes too high. To do this yet another predictive mechanism is put in place, called "Predictive Migration". It aims to keep SLO violation penalties low and does this by using resource usage predictions to migrate tenants ahead of time.\\
+Lastly CloudScale employs a mechanism, with which CPU speed is dynamically changed to minimize power consumption.\\
+The paper does experiments in multiple scenarios for every mentioned feature. It compares CloudScale with other similar technologies and shows that it outperforms all of them.
+\newpage
+
+\section{Main Strengths}
+\begin{itemize}
+\setlength{\itemsep}{-2pt}
+\item Every explanation is extensive, giving full insight into the backend algorithm.
+\item The experiments are done with three different systems, increasing their validity.
+\item The experiments are all well visualized with multiple figures.
+\end{itemize}
+
+\section{Main Weaknesses}
+\begin{itemize}
+\setlength{\itemsep}{0pt}
+\item The web traces used for experiments are outdated
+\item The reason for the use of different equipment in different experiments is badly justified
+\item The figures are badly distributed over the pages
+\end{itemize}
+
+\section{Detailed Comments}
+\begin{itemize}
+\setlength{\itemsep}{-2pt}
+\item The paper is written in a linear format. It is very comprehensive but also covers many details. Every algorithm used is explained first roughly and then in mathematical detail. This leaves no questions about the functionalities of CloudScale
+\item The experiments are described in detail and cover multiple scenarios
+\item However the web scenarios are called realistic but are outdated. They are taken from 1998 and 1995. The paper was written in 2011, so the data was already 13 and 16 years old when it was published.
+\item There is a high amount of figures, visualizing every experiment. All the figures are similar in their design, making the paper consistent.
+\item However the figures are distributed very badly among the pages. For figures 8-19 only one figure is referenced on the same page and one is even referenced two pages back. To look at a referenced figure one has to change pages all the time. This noticeably disrupts the reading flow.
+\item The Results-section is very long, yet not sectioned or organized in any way. After inspecting the figures in the paper, it is easy to lose track of one's position in the text.
+\item Two different setups are used during the experiments, one using VCL(NCSU's Virtual Computing Lab) and one using HGCC(Hybrid Green Cloud Computing). It is explained, that VCL cannot be used for all experiments, yet no justification is made for not using HGCC everywhere. 
+\item The impact, which the technologies energy saving scheme has on the execution is not specified.
+\item The technology lacks focus. It tries to solve resource contention problems {\it AND} minimize energy usage in CPUs. For the latter there is an extra part during the evaluation and the explanation. It would have been better to put this into another paper.
+\end{itemize}
+
+\section{Overall Evaluation}
+The paper gives a good thorough explanation of its technology. The technology is not revolutionary, but since it works dynamically on a problem, which is usually solved statically, it can prove useful. The experimental phase is executed sloppily, which raises concerns about the validity of the evaluation.
+\begin{itemize}
+\setlength{\itemsep}{-2pt}
+\item Originality: 3/5
+\item Technical Content: 4/5
+\item Readability: 3/5
+\item Overall: 3/5
+\end{itemize}
+
+\section{Suggestions for Improvement}
+The paper should leave out the part for saving energy. It should focus on solving the problem, which is mentioned in the introduction. Saving energy does not fit into the topic of the paper.\\
+Also the paper should reorganize its Results-section. It should insert headings and move all the figures one page back in order to increase readability.
+
+\end{document}

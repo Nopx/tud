@@ -1,0 +1,34 @@
+\documentclass[a4paper]{article}
+\usepackage{fullpage}
+\oddsidemargin = -0.5in
+
+\iffalse added for extra functionality \fi
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\newcommand{\arrow}{$\xrightarrow[]{}$}
+\usepackage{graphicx,wrapfig,lipsum,mathtools}
+
+
+\begin{document}
+\section{Sources of Performance}
+\subsection{Assumptions}
+{\bf The ideal CPU:}
+\begin{itemize}
+\setlength{\itemsep}{-3pt}
+\item Data is in one memory
+\item Operations are read, write, logic and done on Data
+\item Ordering goes one after another
+\end{itemize}
+\arrow predictable performance\\
+{\bf Actual CPU:}
+\begin{itemize}
+\setlength{\itemsep}{-3pt}
+\item different levels of cache \arrow timing for instruction unclear
+\item Operations done in parallel \arrow Ordering damaged
+\end{itemize}
+
+\section{Optimization}
+{\bf Intrinsics:}\\
+Inline code, using low level instructions, which is Hardware specific.\\
+High level code can do stuff like loop-unrolling (writing multiple statements in loop because if every processor gets for instance 4 statements, it is more efficient).
+\end{document}
